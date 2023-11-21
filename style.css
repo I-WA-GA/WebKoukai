@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'BIZ UDPMincho', serif;
+}
+
+.FlexContainer {
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    background-image: url(img/battle_background.jpg);
+    background-size:cover;
+    display: flex;
+}
+
+
+.column01 {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.column01 img {
+    width: 85%;
+    height: auto;
+    filter: drop-shadow(0 0 10px black);
+}
+
+.column01 .logo {
+    position: absolute;
+    top: 32%;
+    left: 14%;
+    width: 100%;
+}
+
+.column01 .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.column01 .download-btn {
+    padding: 5px 20px;
+    margin: 30px auto;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #e5f00d;
+}
+
+.column01 .logo,
+.column01 .download-btn,
+.column02 .GameOverview {
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+
+.column02 {
+    margin-top: 7%;
+    width: 40%;
+}
+
+.column02 h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+  .column02 .neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+  }
+  
+.column02 .GameOverview {
+    margin-top: 5%;
+    background-color: #020202de;
+    width: 90%;
+}
+
+.column02 .GameOverview p {
+    padding: 30px;
+    font-size: 1.2rem;
+    line-height: 2.8rem;
+}
+
+
+/* Flickering animation */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgba(255, 0, 195, 0.497),
+        0 0 80px rgba(255, 0, 195, 0.497),
+        0 0 90px rgba(255, 0, 195, 0.497),
+        0 0 100px rgba(255, 0, 195, 0.497),
+        0 0 150px rgba(255, 0, 195, 0.497);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+/* 例: 幅が 800px 以上の場合のスタイル変更 */
+@media screen and (max-width: 800px) {
+    .FlexContainer {
+        flex-direction: column;
+    }
+
+    .column01,
+    .column02 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .column02 .GameOverview {
+        margin: 3% auto;
+    }
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Game ダウンロードページ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap" rel="stylesheet">
+</head>
+
+<body class="FlexContainer">
+    <div class="column01" >
+        <img class="image" src="img/mainImg2_edge.svg" alt="">
+        <div class="logo">
+            <img src="img/doragon2.png" alt="">
+        </div>
+        <button class="download-btn" onclick="downloadFile()">Gameをダウンロード</button>
+    </div>
+
+    <div class="column02">
+        <h2 class="neonText">game説明</h2>
+        <div class="GameOverview">
+            <p class="neonText">
+                あまりに気が弱いため、イキがらずにいられない新卒サラリーマン。株式会社ビッグジャーニーに入社した彼は、ある日社長に呼び出される。 だが社長室へ入るには、その前に上司やクレーマーたちと対決し、大人の対応を身に着けるというミッションをクリアしなくてはならない。彼は無事ミッションをクリアし、社長との対面を果たすことができるだろうか。
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function downloadFile() {
+            // ダウンロードするファイルのURL
+            // var fileUrl = 'https://example.com/path/to/your/file.zip';
+            var fileUrl = 'ikiri-man.exe';
+
+            // ファイル名（任意）
+            var fileName = 'ikiri-man.exe';
+
+            // ダウンロードリンクを作成し、クリックしてダウンロードを開始する
+            var link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+</html>
